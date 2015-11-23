@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tattergy</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<!--NavaBar!-->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tattergy</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+    
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="logoutUser()">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!--NavaBar!-->
+    
+    <!--Create new Event!-->
+    <div class="col-md-4 venueOwnerDashboardBox" id="createEventContainer">
+      <h3 class="dashboardBoxTitle">Create an Event</h3>
+      
+      <!--Create event form!-->
+      <div>
+        <!--Event Name!-->
+        <label for="venue_name" class="formLabel">Venue name</label>
+        <input type="text" class="form-control createEventInputs" name="venue_name" id="venue_name" required value="" placeholder="venue name"/>
+        <label for="event_name" class="formLabel">Name</label>
+        <input type="text" class="form-control createEventInputs" name="event_name" id="event_name" required value="" placeholder="event name"/>
+        <!--Event Date!-->
+        <label for="event_date" class="formLabel">Date</label>
+        <input type="date" class="form-control createEventInputs" name="event_date" id="event_date" required value=""/>
+        <!--Event Cover Charge Girls!-->
+        <label for="event_cover_girls" class="formLabel">Cover charge (woman)</label>
+        <input type="text" class="form-control createEventInputs" name="event_cover_girls" id="event_cover_girls" required value="" placeholder="cover charge (woman)"/>
+        <!--Event Cover Charge Guys!-->
+        <label for="event_cover_guys" class="formLabel">Cover charge (men)</label>
+        <input type="text" class="form-control createEventInputs" name="event_cover_guys" id="event_cover_guys" required value="" placeholder="cover charge (men)"/>
+        <!--Event Time!-->
+        <label for="event_time_start" class="formLabel">Starts</label>
+        <input type="time" class="form-control createEventInputs" name="event_time_start" id="event_time_start" required value=""/>
+        <!--Event Time!-->
+        <label for="event_time_end" class="formLabel">Ends</label>
+        <input type="time" class="form-control createEventInputs" name="event_time_end" id="event_time_end" required value=""/>
+        <!--Event Address!-->
+        <label for="event_address" class="formLabel">Address</label>
+        <input type="text" class="form-control createEventInputs" name="event_address" id="event_address" required value="" placeholder="event address"/>
+        <!--Event City!-->
+        <label for="event_city" class="formLabel">City</label>
+        <input type="text" class="form-control createEventInputs" name="event_city" id="event_city" required value="" placeholder="event city"/>
+        <!--Event State!-->
+        <label for="event_state" class="formLabel">State</label>
+        <input type="text" class="form-control createEventInputs" name="event_state" id="event_state" required value="" placeholder="event state"/>
+        <!--Event Zipcode!-->
+        <label for="event_zipcode" class="formLabel">Zipcode</label>
+        <input type="text" class="form-control createEventInputs" name="event_zipcode" id="event_zipcode" required value="" placeholder="event zipcode"/>
+        <!--Event Website!-->
+        <label for="event_website" class="formLabel">Website</label>
+        <input type="url" class="form-control createEventInputs" name="event_website" id="event_website" required value="" placeholder="www.example.com"/>
+        <!--Event phone!-->
+        <label for="event_phone" class="formLabel">Phone number</label>
+        <input type="tel" class="form-control createEventInputs" name="event_phone" id="event_phone" required value="" placeholder="111-222-3333"/>
+        <!--Event Description!-->
+        <textarea name="event_description" id="event_description" class="col-md-12" rows="3" placeholder="event description..."></textarea>
+       <button class="btn-primary pull-right submitBtn" onclick="createNewEvent()">Submit</button>
+      </div>
+
+    </div>
+
+
+    <!--Update Venue Info!-->
+    <div class="col-md-4 venueOwnerDashboardBox" id="updatedVenueinfoContainer">
+        <h3 class="dashboardBoxTitle">Attendees</h3>
+
+    </div>
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+<script src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		isLoggedIn();
+	});
+</script>
+</body>
+</html>

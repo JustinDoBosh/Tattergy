@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tattergy</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<div class="form-signin">
+		<h1 class="form-signin-heading text-muted">Login</h1>
+		<button id="student_register_link" class="pull-left register_userType_link btn-primary invertedBtn" onclick="show_student_form()">Student</button>
+		<button id="venue_owner_register_link" class="pull-right register_userType_link btn-primary" onclick="show_venue_owner_form()">Venue Owner</button>
+
+		<div id="student_register_form" class="show_form">
+			<input type="email" class="form-control" required name="student_email" id="student_email" value="" placeholder="school email"/>
+		    <input type="password" class="form-control" name="student_password" required id="student_password" value="" placeholder="password"/>
+		    <button  class="btn btn-lg btn-primary btn-block" onclick="loginStudent()">Login</button>
+		    <a href="register.html" class="venue_owner_login_link"><small>Register ></small></a>
+		</div>
+
+		<div id="venue_owner_register_form" class="hide_form">
+			<input type="email" class="form-control" required name="venue_email" id="venue_email" value="" placeholder="email"/>
+	    	<input type="password" class="form-control" name="venue_password" required id="venue_password" value="" placeholder="password"/>
+		    <button  class="btn btn-lg btn-primary btn-block" onclick="loginVenueOwner()">Login</button>
+		    <a href="register.html" class="venue_owner_login_link"><small>Register ></small></a>
+		</div>
+
+	</div>
+
+</div>
+
+	
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

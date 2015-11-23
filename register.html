@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tattergy</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<div class="form-signin">
+		<h1 class="form-signin-heading text-muted">Register</h1>
+		<button id="student_register_link" class="pull-left register_userType_link btn-primary invertedBtn" onclick="show_student_form()">Student</button>
+		<button id="venue_owner_register_link" class="pull-right register_userType_link btn-primary" onclick="show_venue_owner_form()">Venue Owner</button>
+		
+		<div id="student_register_form" class="show_form">
+			<input type="text" class="form-control" required name="student_first_name" id="student_first_name" value="" placeholder="first name"/>
+			<input type="text" class="form-control" required name="student_last_name" id="student_last_name" value="" placeholder="last name"/>
+			<select type="text" class="form-control" required id="unversity">
+			    <option value="UT">The University of Tampa</option>
+			    <option value="USF">The University of South Florida</option>
+			</select>
+			<input type="email" class="form-control" required name="student_email" id="student_email" value="" placeholder="school email"/>
+		    <input type="password" class="form-control" name="student_password" required id="student_password" value="" placeholder="password"/>
+		    <input type="password" class="form-control" name="student_password_confirm" required id="student_password_confirm" value="" placeholder="confirm password"/>
+		    <button  class="btn btn-lg btn-primary btn-block" onclick="createStudent()">Submit</button>
+		    <a href="index.html" class="venue_owner_login_link"><small>Login ></small></a>
+		</div>
+
+		<div id="venue_owner_register_form" class="hide_form">
+			<input type="text" class="form-control" required name="venue_owner_first_name" id="venue_owner_first_name" value="" placeholder="first name"/>
+			<input type="text" class="form-control" required name="venue_owner_last_name" id="venue_owner_last_name" value="" placeholder="last name"/>
+			<input type="text" class="form-control" required name="venue_name" id="venue_name" value="" placeholder="venue name"/>
+			<input type="email" class="form-control" required name="venue_owner_email" id="venue_owner_email" value="" placeholder="email"/>
+		    <input type="password" class="form-control" name="venue_owner_password" required id="venue_owner_password" value="" placeholder="password"/>
+		    <input type="password" class="form-control" name="venue_owner_password_confirm" required id="venue_owner_password_confirm" value="" placeholder="confirm password"/>
+		    <button  class="btn btn-lg btn-primary btn-block" onclick="createVenueOwner()">Submit</button>
+		    <a href="index.html" class="venue_owner_login_link"><small>Login ></small></a>
+		</div>
+	</div>
+
+</div>
+
+	
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

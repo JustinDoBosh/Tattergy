@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tattergy</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<!--NavaBar!-->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tattergy</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="logoutUser()">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!--NavaBar!-->
+
+    <!--<div class="displayEventContainer col-md-4">
+      <ul> 
+        <li class="displayEventListItem" id="displayEventVenueName">Venue name</li>
+        <li class="displayEventListItem" id="displayEventName">Name</li>
+        <li class="displayEventListItem" id="displayEventDate">Date</li>
+        <li class="displayEventListItem" id="displayEventCoverGirls">Cover for Girls</li>
+        <li class="displayEventListItem" id="displayEventCoverGuys">Cover for Guys</li>
+        <li class="displayEventListItem" id="displayEventStartTime">Start time</li>
+        <li class="displayEventListItem" id="displayEventEndTime">End time</li>
+        <li class="displayEventListItem" id="displayEventAddress">Address</li>
+        <li class="displayEventListItem" id="displayEventCity">City</li>
+        <li class="displayEventListItem" id="displayEventState">State</li>
+        <li class="displayEventListItem" id="displayEventZipcode">Zipcode</li>
+        <li class="displayEventListItem" id="displayEventWebsite">Website</li>
+        <li class="displayEventListItem" id="displayEventPhone">Phone</li>
+    </ul>
+    <p class="col-md-12" id="eventDisplayDescription"></p>
+    </div>!-->
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="displayEventContainer">
+
+          <!--Event Content!-->
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h4 class="text-center"><span class="label label-info" id="displayEventVenueName1">Venue Name</span></h4>
+              <img src="http://placehold.it/650x450&text=Event Name" class="img-responsive">
+              <div class="caption">
+                <div class="row">
+                  <div class="col-md-6 col-xs-6">
+                    <p>Cover (Ladies): <span id="displayEventCoverGirls1"> </span></p>
+                    <p>Cover (Men): <span id="displayEventCoverGuys1"> </span></p>
+                    <p id="displayEventWebsite1"></p>
+                    <p id="displayEventPhone1"></p>
+                  </div>
+                  
+                  <div class="col-md-6 col-xs-6 price">
+                    <p>Date: <span id="displayEventDate1"> </span></p>
+                    <p>Time: <span id="displayEventStartTime1"> </span> - <span id="displayEventEndTime1"></p>
+                    <address><span id="displayEventAddress1"> </span><br/><span id="displayEventCity1"> </span>, <span id="displayEventState1"> </span><br/> <span id="displayEventZipcode1"> </span></address>
+                  </div>
+                </div>
+                <p><strong>Description:</strong> <span id="eventDisplayDescription1"> </span> </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#aboutModal" data-toggle="modal" data-target="#myModal"class="btn btn-primary btn-product">Join Guest List</a> 
+                  </div>
+                  <div class="col-md-6">
+                     <a href="#aboutModal" data-toggle="modal" data-target="#VIPModal"class="btn btn-success btn-product">Join VIP List</a></div>
+                  </div>
+                </div>
+              </div>
+          </div><!--End Event Content!-->
+
+          <!--Event Content!-->
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h4 class="text-center"><span class="label label-info" id="displayEventVenueName2">Venue Name</span></h4>
+              <img src="http://placehold.it/650x450&text=Event Name" class="img-responsive">
+              <div class="caption">
+                <div class="row">
+                  <div class="col-md-6 col-xs-6">
+                    <p>Cover (Ladies): <span id="displayEventCoverGirls2"> </span></p>
+                    <p>Cover (Men): <span id="displayEventCoverGuys2"> </span></p>
+                    <p id="displayEventWebsite2"></p>
+                    <p id="displayEventPhone2"></p>
+                  </div>
+                  
+                  <div class="col-md-6 col-xs-6 price">
+                    <p>Date: <span id="displayEventDate2"> </span></p>
+                    <p>Time: <span id="displayEventStartTime2"> </span> - <span id="displayEventEndTime2"></p>
+                    <address><span id="displayEventAddress2"> </span><br/><span id="displayEventCity2"> </span>, <span id="displayEventState2"> </span><br/> <span id="displayEventZipcode2"> </span></address>
+                  </div>
+                </div>
+                <p><strong>Description:</strong> <span id="eventDisplayDescription2"> </span> </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#aboutModal" data-toggle="modal" data-target="#myModal"class="btn btn-primary btn-product">Join Guest List</a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a href="#aboutModal" data-toggle="modal" data-target="#VIPModal"class="btn btn-success btn-product">Join VIP List</a></div>
+                  </div>
+                </div>
+              </div>
+
+          </div><!--End Event Content!-->
+
+           <!--Event Content!-->
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <h4 class="text-center"><span class="label label-info" id="displayEventVenueName3">Venue Name</span></h4>
+              <img src="http://placehold.it/650x450&text=Event Name" class="img-responsive">
+              <div class="caption">
+                <div class="row">
+                  <div class="col-md-6 col-xs-6">
+                    <p>Cover (Ladies): <span id="displayEventCoverGirls3"> </span></p>
+                    <p>Cover (Men): <span id="displayEventCoverGuys3"> </span></p>
+                    <p id="displayEventWebsite3"></p>
+                    <p id="displayEventPhone3"></p>
+                  </div>
+                  
+                  <div class="col-md-6 col-xs-6 price">
+                    <p>Date: <span id="displayEventDate3"> </span></p>
+                    <p>Time: <span id="displayEventStartTime3"> </span> - <span id="displayEventEndTime3"></p>
+                    <address><span id="displayEventAddress3"> </span><br/><span id="displayEventCity3"> </span>, <span id="displayEventState3"> </span><br/> <span id="displayEventZipcode3"> </span></address>
+                  </div>
+                </div>
+                <p><strong>Description:</strong> <span id="eventDisplayDescription3"> </span> </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#aboutModal" data-toggle="modal" data-target="#myModal"class="btn btn-primary btn-product">Join Guest List</a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a href="#aboutModal" data-toggle="modal" data-target="#VIPModal"class="btn btn-success btn-product">Join VIP List</a></div>
+                  </div>
+                </div>
+              </div>
+
+          </div><!--End Event Content!-->
+
+
+        </div> 
+      </div>
+    </div>
+
+
+    <!--Guest List Modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title" id="myModalLabel">Add me to the Guest List!</h4>
+                    </div>
+                <div class="modal-body col-md-8 col-md-offset-2">
+                  <input type="text" name="firstName" id="GuestList_f_name" class="form-control" required value="" placeholder="first name"/>
+
+                  <input type="text" name="lastName" id="GuestList_l_name" class="form-control" required value="" placeholder="last name"/>
+
+                  <select id="guestListDropDown" class="col-md-12">
+                    <!--<option value="volvo">Volvo</option>!-->
+                    
+                  </select>
+                    
+                </div><!--End Modal Body!-->
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-primary" onclick="guestList()">Add me to the list!</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--VIP Guest List Modal-->
+    <div class="modal fade" id="VIPModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 class="modal-title" id="myModalLabel">Add me to the VIP List!</h4>
+                    </div>
+                <div class="modal-body col-md-8 col-md-offset-2">
+                  <input type="text" name="firstName" id="VIPGuestList_f_name" class="form-control" required value="" placeholder="first name"/>
+
+                  <input type="text" name="lastName" id="VIPGuestList_l_name" class="form-control" required value="" placeholder="last name"/>
+
+                  <select id="VIPGuestListDropDown" class="col-md-12">
+                    <!--<option value="volvo">Volvo</option>!-->
+                    
+                  </select>
+                    
+                </div><!--End Modal Body!-->
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-primary" onclick="VIPGuestList()">Add me to the list!</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+<script src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		isLoggedIn();
+    displayEvents();
+	});
+</script>
+</body>
+</html>
